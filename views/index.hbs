@@ -1,0 +1,12 @@
+{{>error}}
+
+{{#each posts}}
+<div class="post">
+    <h1><a href='/posts/show/{{_id}}'>{{title}}</a></h1>
+    <p class="meta">Posted in <a href="/categories/show/{{category}}">{{category}}</a> by {{author}} on
+        {{formatDate createdAt}}</p>
+    <img src="/uploads/{{image}}" />
+    {{{truncate body 200}}}
+    <a class="more" href='/posts/show/{{_id}}'>...Read More</a>
+</div>
+{{/each}}

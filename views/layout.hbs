@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel='stylesheet' href="/stylesheets/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</head>
+
+<body>
+  <div class="text-center"><img src="/images/nodebloglogo.png"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <!-- <a class="navbar-brand" href="#"></a>-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white {{#if active_home}}active{{/if}}" href="/">Home</a>
+        </li>
+        {{#unless user}}
+        <li class="nav-item">
+          <a class="nav-link text-white {{#if active_addpot}}active{{/if}}" href="/posts/add">Add Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white {{#if active_addcat}}active{{/if}}" href="/categories/add">Add Category</a>
+        </li>
+        {{/unless}}
+      </ul>
+
+      <ul class="navbar-nav">
+        {{#if user}}
+        <li class="nav-item">
+          <a class="nav-link" href="/users/logout">Logout</a>
+        </li>
+        {{/if}}
+      </ul>
+
+    </div>
+  </nav>
+
+  {{#if title}}
+  <h1 class="bd-title">{{title}}</h1>
+  {{/if}}
+
+  {{#if messages}}<div class='alert alert-success m-3'> {{messages}}</div>{{/if}}
+
+
+  {{{body}}}
+
+</body>
+
+</html>

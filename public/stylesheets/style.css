@@ -1,0 +1,69 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+h2 {
+  margin-top: 5px;
+}
+
+nav a.current,
+nav a:hover {
+  background: #83cd29;
+  color: #000;
+}
+
+.meta {
+  padding: 7px;
+  border: 1px solid #ccc;
+  background: #ccc;
+}
+
+a.more {
+  display: block;
+  width: 120px;
+  background: #404137;
+  color: #fff;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.post h1 a {
+  color: #666;
+  text-decoration: none;
+}
+
+.post img {
+  width: 30%;
+}
+
+/*
+div.success {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+div.error {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+*/
